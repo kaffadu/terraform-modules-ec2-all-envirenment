@@ -25,7 +25,7 @@ pipeline {
     stage('Terraform Apply') {
         steps {
         // Go to the repository directory
-        dir('terraform-modules-ec2-all-envirenment/variables') {
+        dir('terraform-modules-ec2-all-envirenment') {
           // Run 'terraform apply' command with 'prod.tfvars'
             sh 'terraform apply -auto-approve -var-file=prod.tfvars'
         }
